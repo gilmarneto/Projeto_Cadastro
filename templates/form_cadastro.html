@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<!-- na página form_cadastro termos o nosso formulário de cadastro -->
+<h1>Formulário de Cadastro</h1>
+<form class="form-control">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nome</label>
+        <input type="text" name="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Idade</label>
+        <input type="text" name="idade" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Profissão</label>
+        <input type="text" name="profissao" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a href="/"><button type="button" class="btn btn-secondary float-end">Ver tabela</button></a>
+</form>
+{% endblock %}

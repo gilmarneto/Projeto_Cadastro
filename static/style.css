@@ -1,0 +1,9 @@
+/* data inicial: 04/10/2024 */
+
+body {
+    height: 100%;
+}
+
+.largura-form {
+    max-width: 450px;
+}
