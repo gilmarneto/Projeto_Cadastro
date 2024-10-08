@@ -1,6 +1,25 @@
 {% extends "template.html" %}
 {% block conteudo %}
-    <!-- na página principal termeos a tabela de valores -->
-    <h1>Página principal</h1>
-    <a href="/cadastro"><button type="button" class="btn btn-dark">Cadastro</button></a>
+<!-- na página principal termeos a tabela de valores -->
+<h1>Tabela - Pessoas</h1>
+<a href="/tela_cadastro"><button type="button" class="btn btn-dark">Cadastro</button></a>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pessoa in pessoas%}
+        <tr>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.idade }}</td>
+            <td>{{ pessoa.profissao }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
