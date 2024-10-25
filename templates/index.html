@@ -8,16 +8,20 @@
     <thead>
         <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Idade</th>
+            <th scope="col" class="text-center">Idade</th>
             <th scope="col">Profissão</th>
+            <th scope="col" class="text-center">Editar</th>
+            <th scope="col" class="text-center">Excluir</th>
         </tr>
     </thead>
     <tbody>
         {% for pessoa in pessoas%}
         <tr>
             <td>{{ pessoa.nome }}</td>
-            <td>{{ pessoa.idade }}</td>
+            <td class="text-center">{{ pessoa.idade }}</td>
             <td>{{ pessoa.profissao }}</td>
+            <td class="text-center"><a href="/alterar_dados?id={{ pessoa._id  }}">✎</a></td>
+            <td class="text-center"><a href="/excluir_pessoa?id={{ pessoa._id  }}">╳</a></td>
         </tr>
         {% endfor %}
     </tbody>

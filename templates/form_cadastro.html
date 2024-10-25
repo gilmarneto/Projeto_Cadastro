@@ -2,20 +2,24 @@
 {% block conteudo %}
 <!-- na página form_cadastro termos o nosso formulário de cadastro -->
 <h1>Formulário de Cadastro</h1>
-<form class="form-control" action="/cadastro" method="post">
+<form class="form-control" action='{{ acao }}' method="post">
+    <div class="mb-3 d-none">
+        <label for="exampleInputEmail1" class="form-label" hidden>ID</label>
+        <input type="text" name="_id" class="form-control" id="exampleInputId1" value="{{ dados_pessoa_selecionada['_id'] }}" aria-describedby="emailHelp">
+    </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Nome</label>
-        <input type="text" name="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" name="nome" class="form-control" id="exampleInputEmail1" value="{{ dados_pessoa_selecionada['nome'] }}" aria-describedby="emailHelp" required>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Idade</label>
-        <input type="text" name="idade" class="form-control" id="exampleInputPassword1">
+        <input type="text" name="idade" class="form-control" id="exampleInputPassword1" value="{{ dados_pessoa_selecionada['idade'] }}" required>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Profissão</label>
-        <input type="text" name="profissao" class="form-control" id="exampleInputPassword1">
+        <input type="text" name="profissao" class="form-control" id="exampleInputPassword1" value="{{ dados_pessoa_selecionada['profissao'] }}" required>
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
     <a href="/"><button type="button" class="btn btn-secondary float-end">Ver tabela</button></a>
 </form>
 {% endblock %}

@@ -3,7 +3,6 @@
 from class_pessoa import Pessoa
 from pymongo import MongoClient
 
-
 class Create(Pessoa):
     def __init__(self, nome='', idade=0, profissao='') -> None:
         super().__init__(nome, idade, profissao)
